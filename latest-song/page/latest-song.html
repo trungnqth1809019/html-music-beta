@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R Music</title>
+    <link rel="stylesheet" href="../css/latest-song.css">
+    <link rel="stylesheet" href="../../form/css/form-page.css">
+    <style>
+        .footer{
+            margin-bottom: 5%;
+        }
+    </style>
+</head>
+<body>
+<!--Header-->
+<div class="header row col-m-12 col-12">
+    <div class="logo col-3 col-t-3"><h1>R Music</h1></div>
+    <div class="banner col-9 - col-t-9 "><p>WEB CHIA SẺ ÂM NHẠC TRỰC TUYẾN</p></div>
+</div>
+<!--nav, main-content, aside-->
+<div class="row">
+    <!--nav-->
+    <div class="nav col-2 col-t-3">
+        <ul>
+            <li><a href="../../register/page/register.html">Đăng ký</a></li>
+            <li><a href="../../login/page/login.html">Đăng nhập</a></li>
+            <li><a class="active" href="#">Bài hát mới</a></li>
+            <li><a href="../../create-song/page/create-song.html">Đăng bài hát</a></li>
+            <li><a href="../../my-song/page/my-song.html">Nhạc của tôi</a></li>
+        </ul>
+    </div>
+    <!--main-content-->
+    <div class="main-content col-8 col-t-9">
+        <h3>BÀI HÁT MỚI</h3>
+        <div class="list-song" id="list-song"></div>
+        <div class="btn-load-more"><input id="btn-load-more" type="button" value="Tải thêm"></div>
+    </div>
+    <!--aside-->
+    <div class="aside col-2 col-t-12 "></div>
+</div>
+<!--footer-->
+<div class="footer tmp col-12 col-t-12"><p>Copyright &copy; 2018 R Music</p></div>
+<!--play song-->
+<div class="music-player col-t-12 col-12" name="musicPlayer">
+    <audio controls src=""></audio>
+</div>
+<!--javascript-->
+<script src="../js/latest-song.js"></script>
+</body>
+</html>

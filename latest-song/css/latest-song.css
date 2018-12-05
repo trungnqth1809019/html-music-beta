@@ -1,0 +1,91 @@
+.main-content {
+
+}
+
+.main-content h3 {
+    text-align: center;
+}
+
+.main-content .btn-load-more{
+    text-align: center;
+}
+
+#btn-load-more {
+    margin: 1%;
+}
+
+.song-item {
+    border: 1px solid #c2c2a3;
+    border-radius: 10px;
+    margin-top: 1%;
+}
+
+.song-item::after {
+    content: '';
+    clear: both;
+    display: table;
+}
+
+.song-index {
+    float: left;
+    width: 5%;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 1%;
+    padding-left: 1%;
+}
+
+.song-thumbnail {
+    float: left;
+    width: 15%;
+}
+
+.song-thumbnail img {
+    width: 100%;
+    border-radius: 10px;
+
+}
+
+.song-information {
+    padding-left: 1%;
+    padding-top: 1%;
+    float: left;
+    width: 40%;
+}
+
+.song-information .song-name {
+    padding-top: 1%;
+    font-weight: bold;
+}
+
+.song-information .song-singer {
+    font-weight: lighter;
+    color: rgba(0, 0, 23, 0.47);
+    padding-top: 1%;
+}
+
+.song-control {
+    padding-top: 3%;
+    color: dodgerblue;
+    cursor: pointer;
+    text-decoration: underline;
+    float: left;
+    width: 20%;
+    text-align: center;
+}
+
+.song-detail {
+    float: left;
+    width: 20%;
+    padding-top: 3%;
+    font-weight: bold;
+    text-align: center;
+}
+
+.music-player {
+    background: #f2f2f2;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+}

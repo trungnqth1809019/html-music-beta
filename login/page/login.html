@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R Music</title>
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../../form/css/form-validate.css">
+    <link rel="stylesheet" href="../../form/css/form-page.css">
+</head>
+<body>
+<!--Header-->
+<div class="header row col-m-12 col-12">
+    <div class="logo col-3 col-t-3"><h1>R Music</h1></div>
+    <div class="banner col-9 - col-t-9 "><p>WEB CHIA SẺ ÂM NHẠC TRỰC TUYẾN</p></div>
+</div>
+<!--nav, main-content, aside-->
+<div class="row">
+    <!--nav-->
+    <div class="nav col-2 col-t-3">
+        <ul>
+            <li><a href="../../register/page/register.html">Đăng ký</a></li>
+            <li><a class="active" href="#">Đăng nhập</a></li>
+            <li><a href="../../latest-song/page/latest-song.html">Bài hát mới</a></li>
+            <li><a href="../../create-song/page/create-song.html">Đăng bài hát</a></li>
+            <li><a href="../../my-song/page/my-song.html">Nhạc của tôi</a></li>
+        </ul>
+    </div>
+    <!--main-content-->
+    <div class="main-content col-8 col-t-9">
+        <table>
+        <form name="login-form">
+            <tr>
+                <td></td>
+                <td><h3>Đăng nhập</h3></td>
+                <td></td>
+            </tr>
+            <tr>
+            <div>
+                <td><label for="email">Email</label></td>
+                <td><input id="email" name="email" type="email" placeholder="Nhập email"></td>
+                <td><span class="msg-email"></span></td>
+            </div>
+            </tr>
+            <tr>
+            <div>
+                <td><label for="password">Mật khẩu</label></td>
+                <td><input id="password" name="password" type="password" placeholder="Nhập mật khẩu"></td>
+                <td><span class="msg-password"></span></td>
+            </div>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="button" class="btn-submit" name="btn-submit" value="Đăng nhập"><input type="reset" class="reset" name="reset" value="Nhập lại"></td>
+                <td>	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;</td>
+            </tr>
+        </form>
+        </table>
+    </div>
+    <!--aside-->
+    <div class="aside col-2 col-t-12 "></div>
+</div>
+<!--footer-->
+<div class="footer col-12 col-t-12"><p>Copyright &copy; 2018 R Music</p></div>
+<!--javascript-->
+<script src="../js/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R Music</title>
+    <link rel="stylesheet" href="../css/create-song.css">
+    <link rel="stylesheet" href="../../form/css/form-validate.css">
+    <link rel="stylesheet" href="../../form/css/form-page.css">
+</head>
+<body>
+<!--Header-->
+<div class="header row col-m-12 col-12">
+    <div class="logo col-3 col-t-3"><h1>R Music</h1></div>
+    <div class="banner col-9 - col-t-9 "><p>WEB CHIA SẺ ÂM NHẠC TRỰC TUYẾN</p></div>
+</div>
+<!--nav, main-content, aside-->
+<div class="row">
+    <!--nav-->
+    <div class="nav col-2 col-t-3">
+        <ul>
+            <li><a href="../../register/page/register.html">Đăng ký</a></li>
+            <li><a href="../../login/page/login.html">Đăng nhập</a></li>
+            <li><a href="../../latest-song/page/latest-song.html">Bài hát mới</a></li>
+            <li><a class="active" href="#">Đăng bài hát</a></li>
+            <li><a href="../../my-song/page/my-song.html">Nhạc của tôi</a></li>
+        </ul>
+    </div>
+    <!--main-content-->
+    <div class="main-content col-8 col-t-9">
+        <table>
+            <form name="song-form">
+                <tr>
+                    <td></td>
+                    <td><h3>Đăng bài hát</h3></td>
+                    <td></td>
+                </tr>
+                <tr>
+                <div>
+                    <td><label>Tên ca khúc</label></td>
+                    <td><input type="text" name="name"></td>
+                    <td><span class="msgName"></span></td>
+                </div>
+                </tr>
+                <tr>
+                <div>
+                    <td><label>Hình ảnh</label></td>
+                    <td><input type="text" name="thumbnail"></td>
+                    <td><span class="msgThumbnail"></span></td>
+                </div>
+                </tr>
+                <tr>
+                <div>
+                    <td><label>Ca sỹ</label></td>
+                    <td><input type="text" name="singer"></td>
+                    <td><span class="msgSinger"></span></td>
+                </div>
+                </tr>
+                <tr>
+                <div>
+                    <td><label>Nhạc sỹ</label></td>
+                    <td><input type="text" name="author"></td>
+                    <td><span class="msgAuthor"></span></td>
+                </div>
+                </tr>
+                <tr>
+                <div>
+                    <td><label>Link</label></td>
+                    <td><input type="text" name="link"></td>
+                    <td><span class="msgLink"></span></td>
+                </div>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="button" class="btn-submit" name="btn-submit" id="save-song" value="Đăng bài hát"><input type="reset" class="reset" name="reset" value="Nhập lại"></td>
+                    <td>	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;</td>
+                </tr>
+            </form>
+        </table>
+    </div>
+    <!--aside-->
+    <div class="aside col-2 col-t-12 "></div>
+</div>
+<!--footer-->
+<div class="footer col-12 col-t-12"><p>Copyright &copy; 2018 R Music</p></div>
+<!--javascript-->
+<script src="../js/create-song.js"></script>
+</body>
+</html>

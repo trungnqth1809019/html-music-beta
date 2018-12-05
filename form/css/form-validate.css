@@ -1,0 +1,45 @@
+.msg-success {
+    color: green;
+}
+
+.msg-error {
+    color: red;
+}
+
+.main-content{
+    /*background-color: #c2c2a3;*/
+}
+
+.main-content label{
+    float: right;
+}
+
+.main-content input{
+    padding: 2px;
+    width: 100%;
+}
+
+.main-content .reset{
+    width: 50%;
+}
+
+.main-content .btn-submit{
+    width: 50%;
+}
+
+.main-content span{
+    float: left;
+}
+
+.main-content table{
+    width: 100%;
+    text-align: center;
+}
+
+.main-content tr{
+    padding: 8px;
+}
+
+.main-content td{
+    padding: 8px;
+}
