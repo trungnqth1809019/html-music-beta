@@ -1,7 +1,15 @@
-var btnSubmit = document.forms['register-form']['btnSubmit'];
-btnSubmit.onclick = function () {
+var API = 'https://2-dot-backup-server-003.appspot.com/_api/v2/members';
+//submit
+document.forms['register-form']['btnSubmit'].onclick = function () {
     if (validateForm()) {
         doRegister();
+    }
+};
+//reset form
+document.forms['register-form']['btnReset'].onclick = function () {
+    var msg = document.querySelectorAll("[class*='msg-']");
+    for (var i = 0; i < msg.length; i++) {
+        msg[i].innerHTML = '';
     }
 };
 
@@ -131,7 +139,7 @@ function validateForm() {
     //kiem tra isvalidate
     isValidate = isValidateFirstName && isValidateLastName && isValidatePassword && isValidateConfirmPassword && isValidateAddress && isValidatePhone && isValidateAvatar && isValidateEmail;
     return isValidate;
-};
+}
 
 //ham dang ky
 function doRegister() {
@@ -165,10 +173,10 @@ function doRegister() {
             location.href = '../../login/page/login.html';
         } else if (xhr.readyState == 4) {
             var responseData = JSON.parse(xhr.responseText);
-            alert('Đăng ký thất bại, Thử lại!' + xhr.responseText);
+            alert('Đăng ký thất bại, Thử lại!' + responseData.error);
         }
     };
-    xhr.open('POST', 'https://2-dot-backup-server-002.appspot.com/_api/v2/members', true);
+    xhr.open('POST', API, true);
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.send(sendData);
-};
+}

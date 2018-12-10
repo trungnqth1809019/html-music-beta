@@ -6,11 +6,9 @@
     <title>R Music</title>
     <link rel="stylesheet" href="../css/latest-song.css">
     <link rel="stylesheet" href="../../form/css/form-page.css">
-    <style>
-        .footer{
-            margin-bottom: 5%;
-        }
-    </style>
+    <link rel="stylesheet" href="../../form/css/form-list-song.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+          integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 </head>
 <body>
 <!--Header-->
@@ -34,7 +32,6 @@
     <div class="main-content col-8 col-t-9">
         <h3>BÀI HÁT MỚI</h3>
         <div class="list-song" id="list-song"></div>
-        <div class="btn-load-more"><input id="btn-load-more" type="button" value="Tải thêm"></div>
     </div>
     <!--aside-->
     <div class="aside col-2 col-t-12 "></div>
@@ -42,7 +39,7 @@
 <!--footer-->
 <div class="footer tmp col-12 col-t-12"><p>Copyright &copy; 2018 R Music</p></div>
 <!--play song-->
-<div class="music-player col-t-12 col-12" name="musicPlayer">
+<div class="music-player col-t-12 col-12">
     <audio controls src=""></audio>
 </div>
 <!--javascript-->

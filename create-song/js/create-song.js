@@ -1,9 +1,26 @@
-document.forms['song-form']['btn-submit'].onclick = function () {
+var API = 'https://2-dot-backup-server-003.appspot.com/_api/v2/songs';
+//Kiem tra dang nhap
+var token = localStorage.getItem('token-key');
+if (token == null) {
+    alert('Bạn cần đăng nhập trước!');
+    location.href = '../../login/page/login.html';
+}
 
-    if (validateForm()){
+//ham submit
+document.forms['song-form']['btnSubmit'].onclick = function () {
+    if (validateForm()) {
         saveSong();
     }
 };
+
+//reset form
+document.forms['song-form']['btnReset'].onclick = function () {
+    var msg = document.querySelectorAll("[class*='msg-']");
+    for (var i = 0; i < msg.length; i++) {
+        msg[i].innerHTML = '';
+    }
+};
+
 //ham kiem tra form
 function validateForm() {
     var validateInformation = false;
@@ -24,60 +41,60 @@ function validateForm() {
     var link = document.forms['song-form']['link'];
     var msgLink = document.querySelector("[class*='msgLink']");
     //kiem tra ten bai hat
-    if (name.value == null || name.value.length === 0){
+    if (name.value == null || name.value.length === 0) {
         msgName.classList.add('msg-error');
         msgName.classList.remove('msg-success');
         msgName.innerHTML = 'Không được để trống mục này';
         validateName = false;
-    }else{
+    } else {
         msgName.innerHTML = 'Hợp lệ';
         msgName.classList.add('msg-success');
         msgName.classList.remove('msg-error');
         validateName = true;
     }
     //kiem tra ca sy
-    if (singer.value == null || singer.value.length == 0){
+    if (singer.value == null || singer.value.length == 0) {
         msgSinger.innerHTML = 'Không được để trống mục này';
         msgSinger.classList.add('msg-error');
         msgSinger.classList.remove('msg-success');
         validateSinger = false;
-    }else{
+    } else {
         msgSinger.innerHTML = 'Hợp lệ';
         msgSinger.classList.add('msg-success');
         msgSinger.classList.remove('msg-error');
         validateSinger = true;
     }
     //kiem tra nhac si
-    if (author.value == null || author.value.length == 0){
+    if (author.value == null || author.value.length == 0) {
         msgAuthor.innerHTML = 'Không được để trống mục này';
         msgAuthor.classList.add('msg-error');
         msgAuthor.classList.remove('msg-success');
         validateAuthor = false;
-    }else{
+    } else {
         msgAuthor.innerHTML = 'Hợp lệ';
         msgAuthor.classList.add('msg-success');
         msgAuthor.classList.remove('msg-error');
         validateAuthor = true;
     }
     //kiem tra anh
-    if (thumbnail.value == null || thumbnail.value.length == 0){
+    if (thumbnail.value == null || thumbnail.value.length == 0) {
         msgThumbnail.innerHTML = 'Không được để trống mục này';
         msgThumbnail.classList.add('msg-error');
         msgThumbnail.classList.remove('msg-success');
         validateThumbnail = false;
-    }else{
+    } else {
         msgThumbnail.innerHTML = 'Hợp lệ';
         msgThumbnail.classList.add('msg-success');
         msgThumbnail.classList.remove('msg-error');
         validateThumbnail = true;
     }
     //kiem tra link
-    if (link.value == null || link.value.length == 0){
+    if (link.value == null || link.value.length == 0) {
         msgLink.innerHTML = 'Không được để trống mục này';
         msgLink.classList.add('msg-error');
         msgLink.classList.remove('msg-success');
         validateLink = false;
-    }else{
+    } else {
         msgLink.innerHTML = 'Hợp lệ';
         msgLink.classList.add('msg-success');
         msgLink.classList.remove('msg-error');
@@ -86,6 +103,7 @@ function validateForm() {
     validateInformation = validateName && validateSinger && validateAuthor && validateThumbnail && validateLink;
     return validateInformation;
 }
+
 //ham gui thong tin luu bai hat
 function saveSong() {
     var name = document.forms['song-form']['name'].value;
@@ -105,15 +123,20 @@ function saveSong() {
     xhr.onreadystatechange = function () {//khi trang thai thay doi// thuowng duoc gan bang mot ham vo danh
         if (xhr.readyState == 4 && xhr.status == 201) {
             alert('Lưu bài hát hoàn tất');
+
             document.forms['song-form'].reset();
-            msgName.innerHTML = '';
-            msgAuthor.innerHTML = '';
-            msgSinger.innerHTML = '';
-            msgThumbnail.innerHTML = '';
-            msgLink.innerHTML = '';
+            var msg = document.querySelectorAll("[class*='msg']");
+            document.forms['song-form'].reset();
+            for (var i = 0; i < msg.length; i++) {
+                msg[i].innerHTML = '';
+            }
+        } else if (xhr.readyState == 4) {
+            var responseData = JSON.parse(xhr.responseText);
+            alert('Lỗi đăng bài hát!' + responseData.error);
         }
     };
-    xhr.open('POST', 'https://2-dot-backup-server-002.appspot.com/_api/v2/songs/post-free', true);
+    xhr.open('POST', API, true);
     xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.setRequestHeader('Authorization', 'Basic ' + localStorage.getItem('token-key'));
     xhr.send(sendData);
 }

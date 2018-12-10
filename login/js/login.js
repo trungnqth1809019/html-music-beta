@@ -1,8 +1,15 @@
-var btnSubmit = document.forms['login-form']['btn-submit'];
-btnSubmit.onclick = function () {
+var API = 'https://2-dot-backup-server-003.appspot.com/_api/v2/members/authentication';
+
+// submit
+document.forms['login-form']['btnSubmit'].onclick = function () {
     if (validateForm()) {
         doLogin();
     }
+};
+//reset form
+document.forms['login-form']['btnReset'].onclick = function () {
+    document.querySelector("[class*='msg-email']").innerHTML = '';
+    document.querySelector("[class*='msg-password']").innerHTML = '';
 };
 
 //ham kiem tra form
@@ -34,7 +41,7 @@ function validateForm() {
         msgPassword.classList.remove('msg-success');
         msgPassword.innerHTML = 'Mật khẩu không được để trống';
         isValidatePassword = false;
-    } else if (password.value.length < 5) {
+    } else if (password.value.length < 2) {
         msgPassword.classList.add('msg-error');
         msgPassword.classList.remove('msg-success');
         msgPassword.innerHTML = 'Mật khẩu ít nhất có 5 kí tự';
@@ -61,6 +68,7 @@ function doLogin() {
 
     var xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function () {
+
         if (xhr.readyState == 4 && xhr.status == 201) {
             var responseData = JSON.parse(xhr.responseText);
             alert('Đăng nhập thành công với ID: ' + responseData.token);
@@ -71,8 +79,7 @@ function doLogin() {
             var responseData = JSON.parse(xhr.responseText);
             var msgEmail = document.querySelector("[class*='msg-email']");
             var msgPassword = document.querySelector("[class*='msg-password']");
-            alert('Đăng nhập thất bại, Thử lại! '
-                + xhr.responseText);
+            alert('Đăng nhập thất bại, Thử lại! ' + xhr.responseText);
             if (responseData.error.email != null) {
                 msgEmail.classList.add('msg-error');
                 // msgEmail.innerHTML = responseData.error.email;
@@ -85,7 +92,7 @@ function doLogin() {
             }
         }
     };
-    xhr.open('POST', 'https://2-dot-backup-server-002.appspot.com/_api/v2/members/authentication', true);
+    xhr.open('POST', API, true);
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.send(jsonLoginInformation);
 }

@@ -1,0 +1,143 @@
+
+.main-content {
+    text-align: center;
+}
+
+.main-content h3 {
+    font-size: 16px;
+    text-align: center;
+    margin: 1%;
+}
+
+.btn-load-more{
+    text-align: center;
+    margin: 1%;
+}
+
+.song-item {
+    /*border: 1px solid #c2c2a3;*/
+    margin: 1% 0 1% 0;
+    background-color: #f1f1f1;
+    /*margin-top: 1%;*/
+    /*border-style: solid;*/
+    /*border-bottom: 1px solid #ff0000;*/
+}
+
+.song-item::after {
+    content: '';
+    clear: both;
+    display: table;
+}
+
+.song-index {
+    float: left;
+    width: 5%;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 3.5% 0 3.5% 0;
+    /*margin-top: 3%;*/
+}
+
+.song-thumbnail {
+    float: left;
+    width: 10%;
+}
+
+.song-thumbnail img {
+    width: 100%;
+    padding: 1% 1% 0 1%;
+}
+
+.song-information {
+    margin: 0 0 0 0;
+    padding: 0 0 0 1%;
+    float: left;
+    width: 65%;
+    text-align: left;
+}
+
+.song-information .song-name {
+    padding-top: 1%;
+    font-weight: bold;
+    display: block;
+    overflow: hidden;
+
+}
+
+.song-information .song-singer {
+    font-weight: lighter;
+    color: #555555;
+    padding-top: 1%;
+}
+
+.song-control{
+    float: left;
+    width: 20%;
+    margin: 3.5% 0 3.5% 0;
+}
+
+.song-control i{
+    cursor: pointer;
+    color: #8c8c8c;
+}
+
+.song-control i:hover{
+    color: #555;
+}
+
+.song-control i:focus{
+    color: red;
+}
+
+.song-control i:active{
+    color: #000;}
+
+.song-control .song-play {
+    /*cursor: pointer;*/
+    float: left;
+    width: 35%;
+    color: #8c8c8c;
+    padding: 0;
+}
+
+/*.song-control .song-play:hover {*/
+/*color: #555;*/
+/*}*/
+
+.song-control .song-detail {
+    /*cursor: pointer;*/
+    float: left;
+    width: 30%;
+    color: #8c8c8c;
+    padding: 0;
+}
+
+.song-control .song-detail:hover {
+    color: #555;
+}
+
+.song-control .song-share{
+    /*cursor: pointer;*/
+    float: left;
+    width: 35%;
+    /*color: #8c8c8c;*/
+    padding: 0;
+}
+
+.song-control .song-share:hover {
+    color: #555;
+}
+
+.music-player audio{
+    /*background: #f2f2f2;*/
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    /*border-radius: 0;*/
+    bottom: 0;
+    color: black;
+}
+
+.footer{
+    margin-bottom: 4%;
+}

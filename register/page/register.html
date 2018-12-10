@@ -28,99 +28,79 @@
     </div>
     <!--main-content-->
     <div class="main-content col-8 col-t-9">
-        <table>
-        <form action="" method="post" name="register-form">
-            <tr>
-                <td></td>
-                <td><h3>Đăng ký tài khoản</h3></td>
-                <td></td>
-            </tr>
-            <tr>
-            <div>
-                <td><label>Họ</label></td>
-                <td><input type="text" id="firstName" name="firstName"></td>
-                <td><span class="msgFirstName"></span></td>
+        <form name="register-form">
+            <div class="row">
+                <div class="col-3 col-t-3">&nbsp;</div>
+                <div class="col-5 col-t-5"><h3>Đăng ký tài khoản</h3></div>
+                <div class="col-4 col-t-4"></div>
             </div>
-            </tr>
-            <tr>
-            <div>
-                <td><label>Tên</label></td>
-                <td><input type="text" name="lastName"></td>
-                <td><span class="msgLastName"></span></td>
+            <div class="row">
+                <div class="col-3 col-t-3 label"><label>Họ</label></div>
+                <div class="col-5 col-t-5"><input class="input" name="firstName" type="text" placeholder="Nhập họ"></div>
+                <div class="col-4 col-t-4"><span class="msgFirstName"></span></div>
             </div>
-            </tr>
-            <tr>
-            <div>
-                <td><label>Mật khẩu</label></td>
-                <td><input type="password" name="password"></td>
-                <td><span class="msgPassword"></span></td>
+            <div class="row">
+                <div class="col-3 col-t-3 label"><label>Tên</label></div>
+                <div class="col-5 col-t-5"><input class="input" name="lastName" type="text" placeholder="Nhập tên"></div>
+                <div class="col-4 col-t-4"><span class="msgLastName"></span></div>
             </div>
-            </tr>
-            <tr>
-            <div>
-                <td><label>Xác nhận mật khẩu</label></td>
-                <td><input type="password" name="confirmPassword"></td>
-                <td><span class="msgConfirmPassword"></span></td>
+            <div class="row">
+                <div class="col-3 col-t-3 label"><label>Mật khẩu</label></div>
+                <div class="col-5 col-t-5"><input class="input" name="password" type="password" placeholder="Mật khẩu"></div>
+                <div class="col-4 col-t-4"><span class="msgPassword"></span></div>
             </div>
-            </tr>
-            <tr>
-            <div>
-                <td><label>Địa chỉ</label></td>
-                <td><textarea name="address" rows="2"></textarea></td>
-                <td><span class="msgAddress"></span></td>
+            <div class="row">
+                <div class="col-3 col-t-3 label"><label>Xác nhận mật khẩu</label></div>
+                <div class="col-5 col-t-5"><input class="input" name="confirmPassword" type="password" placeholder="Xác nhận mật khẩu"></div>
+                <div class="col-4 col-t-4"><span class="msgConfirmPassword"></span></div>
             </div>
-            </tr>
-            <tr>
-            <div>
-                <td><label>Phone</label></td>
-                <td><input type="text" name="phone"></td>
-                <td><span class="msgPhone"></span></td>
+            <div class="row">
+                <div class="col-3 col-t-3 label"><label>Địa chỉ</label></div>
+                <div class="col-5 col-t-5"><textarea class="input" name="address" rows="2" placeholder="Địa chỉ"></textarea></div>
+                <div class="col-4 col-t-4"><span class="msgAddress"></span></div>
             </div>
-            </tr>
-            <tr>
-            <div>
-                <td><label>Avatar</label></td>
-                <td><input type="text" name="avatar"></td>
-                <td><span class="msgAvatar"></span></td>
+            <div class="row">
+                <div class="col-3 col-t-3 label"><label>Số điện thoại</label></div>
+                <div class="col-5 col-t-5"><input class="input" name="phone" type="text" placeholder="Nhập số điện thoại"></div>
+                <div class="col-4 col-t-4"><span class="msgPhone"></span></div>
             </div>
-            </tr>
-            <tr>
-            <div>
-                <td><label>Giới tính</label></td>
-                <td><select name="gender">
-                    <option value="1">Nam</option>
-                    <option value="0">Nữ</option>
-                    <option value="2">Giới tính khác</option>
-                </select></td>
-                <td></td>
+            <div class="row">
+                <div class="col-3 col-t-3 label"><label>Avatar</label></div>
+                <div class="col-5 col-t-5"><input class="input" name="avatar" type="text" placeholder="Nhập Avatar"></div>
+                <div class="col-4 col-t-4"><span class="msgAvatar"></span></div>
             </div>
-            </tr>
-            <tr>
-            <div>
-                <td><label>Email</label></td>
-                <td><input type="email" name="email"></td>
-                <td><span class="msgEmail"></span></td>
+            <div class="row">
+                <div class="col-3 col-t-3 label"><label>Giới tính</label></div>
+                <div class="col-5 col-t-5">
+                    <select name="gender" class="input">
+                        <option value="1">Nam</option>
+                        <option value="0">Nữ</option>
+                        <option value="2">Giới tính khác</option>
+                    </select>
+                </div>
+                <div class="col-4 col-t-4"><span></span></div>
             </div>
-            </tr>
-            <tr>
-            <div>
-                <td><label>Ngày sinh</label></td>
-                <td><input type="date" name="birthday"></td>
-                <td></td>
+            <div class="row">
+                <div class="col-3 col-t-3 label"><label>Email</label></div>
+                <div class="col-5 col-t-5"><input class="input" name="email" type="email" placeholder="Nhập Email"></div>
+                <div class="col-4 col-t-4"><span class="msgEmail"></span></div>
             </div>
-            </tr>
-            <tr>
-                <td><label>Giới thiệu</label></td>
-                <td><textarea name="introduction" rows="2" placeholder="Có thể bỏ trống mục này."></textarea></td>
-                <td><span></span></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td><input type="button" class="btn-submit" name="btnSubmit" value="Submit"><input type="reset" class="reset" name="btnReset" value="Reset"></td>
-                <td>	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;</td>
-            </tr>
+            <div class="row">
+                <div class="col-3 col-t-3 label"><label>Ngày sinh</label></div>
+                <div class="col-5 col-t-5"><input class="input" name="birthday" type="date" placeholder="Nhập Ngày sinh"></div>
+                <div class="col-4 col-t-4"><span class="msgEmail"></span></div>
+            </div>
+            <div class="row">
+                <div class="col-3 col-t-3 label"><label>Giới thiệu</label></div>
+                <div class="col-5 col-t-5"><textarea class="input" name="introduction" rows="4" placeholder="Giới thiệu (Có thể bỏ trống mục này.)"></textarea></div>
+                <div class="col-4 col-t-4"><span></span></div>
+            </div>
+            <div class="row">
+                <div class="col-3 col-t-3">&nbsp;</div>
+                <div class="col-5 col-t-5"><input type="button" class="btn-submit button" name="btnSubmit" value="Đăng ký"><input type="reset" class="btn-reset button" name="btnReset" value="Nhập lại"></div>
+                <div class="col-4 col-t-4"></div>
+            </div>
         </form>
-        </table>
     </div>
     <!--aside-->
     <div class="aside col-2 col-t-12 "></div>
