@@ -3,6 +3,9 @@
     [class*="col-"] {width: 100%;}
     *{font-size: 15px;}
     /*.hidden{display: none;}*/
+    .main-content .label{
+        text-align: center;
+    }
 }
 
 @media only screen and (min-width: 600px) {
@@ -21,6 +24,10 @@
     .col-t-11 {width: 91.66%;}
     .col-t-12 {width: 100%;}
     .nav ul{height: 35em;}
+    .main-content .label{
+        text-align: right;
+    }
+
 }
 
 @media only screen and (min-width: 768px) {
@@ -39,6 +46,9 @@
     .col-11 {width: 91.66%;}
     .col-12 {width: 100%;}
     .nav ul{height: 43em;}
+    .main-content .label{
+        text-align: right;
+    }
 }
 
 body{
